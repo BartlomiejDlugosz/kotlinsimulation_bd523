@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="simulation.SSQTest" tests="1" skipped="0" failures="0" errors="0" timestamp="2024-02-07T17:42:08" hostname="bartlomiej-MS-7B17" time="0.498">
+  <properties/>
+  <testcase name="matches mm1 queueing theory" classname="simulation.SSQTest" time="0.498"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>
