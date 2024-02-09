@@ -6,8 +6,11 @@ import kotlin.test.Test
 import kotlin.test.assertEquals
 
 class ToySimulatorTest {
-
-    private fun getToySimulatorOutput(toySimulator: Simulator, printStream: PrintStream, numOfToys: Int) {
+    private fun getToySimulatorOutput(
+        toySimulator: Simulator,
+        printStream: PrintStream,
+        numOfToys: Int,
+    ) {
         for (i in 1..numOfToys) {
             toySimulator.schedule(ToyEvent(printStream), i.toDouble())
         }
@@ -24,16 +27,16 @@ class ToySimulatorTest {
 
         assertEquals(
             """
-                A toy event occurred.
-                A toy event occurred.
-                A toy event occurred.
-                A toy event occurred.
-                A toy event occurred.
-                A toy event occurred.
-                A toy event occurred.
-                A toy event occurred.
-                A toy event occurred.
-                A toy event occurred.
+            A toy event occurred.
+            A toy event occurred.
+            A toy event occurred.
+            A toy event occurred.
+            A toy event occurred.
+            A toy event occurred.
+            A toy event occurred.
+            A toy event occurred.
+            A toy event occurred.
+            A toy event occurred.
 
             """.trimIndent(),
             outputStream.toString(),
@@ -50,7 +53,7 @@ class ToySimulatorTest {
 
         assertEquals(
             "",
-            outputStream.toString()
+            outputStream.toString(),
         )
     }
 
@@ -64,10 +67,10 @@ class ToySimulatorTest {
 
         assertEquals(
             """
-                A toy event occurred.
+            A toy event occurred.
 
             """.trimIndent(),
-            outputStream.toString()
+            outputStream.toString(),
         )
     }
 }

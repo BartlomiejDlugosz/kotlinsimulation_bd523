@@ -57,7 +57,12 @@ class RandomTickSimulatorTest {
         }
     }
 
-    private fun analyzeOutput(outputStream: ByteArrayOutputStream, firstTime: Double = 0.5, minIncrement: Double = 1.0, maxIncrement: Double = 2.0) {
+    private fun analyzeOutput(
+        outputStream: ByteArrayOutputStream,
+        firstTime: Double = 0.5,
+        minIncrement: Double = 1.0,
+        maxIncrement: Double = 2.0,
+    ) {
         val components = outputStream.toString().split("\n")
         val regex = """Tick at (\d+\.\d+)""".toRegex()
         var foundLastLine = false

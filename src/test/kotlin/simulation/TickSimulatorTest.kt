@@ -6,7 +6,6 @@ import kotlin.test.Test
 import kotlin.test.assertEquals
 
 class TickSimulatorTest {
-
     @Test
     fun `test tick simulator`() {
         val outputStream = ByteArrayOutputStream()
@@ -18,16 +17,16 @@ class TickSimulatorTest {
 
         assertEquals(
             """
-                Tick at 0.5
-                Tick at 1.5
-                Tick at 2.5
-                Tick at 3.5
-                Tick at 4.5
-                Tick at 5.5
-                Tick at 6.5
-                Tick at 7.5
-                Tick at 8.5
-                Tick at 9.5
+            Tick at 0.5
+            Tick at 1.5
+            Tick at 2.5
+            Tick at 3.5
+            Tick at 4.5
+            Tick at 5.5
+            Tick at 6.5
+            Tick at 7.5
+            Tick at 8.5
+            Tick at 9.5
 
             """.trimIndent(),
             outputStream.toString(),
@@ -45,25 +44,25 @@ class TickSimulatorTest {
         tickSimulator.execute()
 
         assertEquals(
-             """
-                Tick at 0.5
-                Tick at 1.5
-                Tick at 2.0
-                Tick at 2.5
-                Tick at 3.0
-                Tick at 3.5
-                Tick at 4.0
-                Tick at 4.5
-                Tick at 5.0
-                Tick at 5.5
-                Tick at 6.0
-                Tick at 6.5
-                Tick at 7.0
-                Tick at 7.5
-                Tick at 8.0
-                Tick at 8.5
-                Tick at 9.0
-                Tick at 9.5
+            """
+            Tick at 0.5
+            Tick at 1.5
+            Tick at 2.0
+            Tick at 2.5
+            Tick at 3.0
+            Tick at 3.5
+            Tick at 4.0
+            Tick at 4.5
+            Tick at 5.0
+            Tick at 5.5
+            Tick at 6.0
+            Tick at 6.5
+            Tick at 7.0
+            Tick at 7.5
+            Tick at 8.0
+            Tick at 8.5
+            Tick at 9.0
+            Tick at 9.5
 
             """.trimIndent(),
             outputStream.toString(),
@@ -79,7 +78,8 @@ class TickSimulatorTest {
         tickSimulator.schedule(TickEvent(printStream, tickSimulator), -0.5)
         tickSimulator.execute()
 
-        assertEquals("""
+        assertEquals(
+            """
             Tick at -0.5
             Tick at 0.5
             Tick at 1.5
@@ -92,7 +92,9 @@ class TickSimulatorTest {
             Tick at 8.5
             Tick at 9.5
 
-        """.trimIndent(), outputStream.toString())
+            """.trimIndent(),
+            outputStream.toString(),
+        )
     }
 
     @Test
@@ -106,16 +108,16 @@ class TickSimulatorTest {
 
         assertEquals(
             """
-                Tick at 0.0
-                Tick at 1.0
-                Tick at 2.0
-                Tick at 3.0
-                Tick at 4.0
-                Tick at 5.0
-                Tick at 6.0
-                Tick at 7.0
-                Tick at 8.0
-                Tick at 9.0
+            Tick at 0.0
+            Tick at 1.0
+            Tick at 2.0
+            Tick at 3.0
+            Tick at 4.0
+            Tick at 5.0
+            Tick at 6.0
+            Tick at 7.0
+            Tick at 8.0
+            Tick at 9.0
 
             """.trimIndent(),
             outputStream.toString(),

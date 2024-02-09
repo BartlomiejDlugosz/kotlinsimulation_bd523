@@ -9,7 +9,10 @@ interface Event {
 }
 
 interface Scheduler {
-    fun schedule(event: Event, dt: Double)
+    fun schedule(
+        event: Event,
+        dt: Double,
+    )
 }
 
 interface TimeDelay {

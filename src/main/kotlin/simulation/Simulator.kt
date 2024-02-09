@@ -1,14 +1,17 @@
 package simulation
 
-import java.util.LinkedList
 import java.util.PriorityQueue
 
-abstract class Simulator: Clock, Scheduler {
+abstract class Simulator : Clock, Scheduler {
     protected var currentTime: Double = 0.0
-    protected val eventsList: PriorityQueue<Pair<Event, Double>> = PriorityQueue(compareBy{it.second})
+    protected val eventsList: PriorityQueue<Pair<Event, Double>> = PriorityQueue(compareBy { it.second })
+
     override fun currentTime(): Double = currentTime
 
-    override fun schedule(event: Event, dt: Double) {
+    override fun schedule(
+        event: Event,
+        dt: Double,
+    ) {
         eventsList.add(event to (currentTime + dt))
     }
 
@@ -23,5 +26,4 @@ abstract class Simulator: Clock, Scheduler {
     }
 
     abstract fun shouldTerminate(): Boolean
-
 }

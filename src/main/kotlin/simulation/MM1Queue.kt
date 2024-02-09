@@ -5,9 +5,7 @@ class MM1Queue(
     serviceMeanTime: Double,
     val seed: Int,
     private val terminationTime: Double,
-
 ) : Simulator() {
-
     private var queueLength = 0
     private var totalAreaUnderQueueLengthGraph = 0.0
     private val arrivalExponentialSample = ExponentialSample(arrivalMeanTime)
