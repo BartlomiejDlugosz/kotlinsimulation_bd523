@@ -1,7 +1,7 @@
 package simulation
 
- import org.junit.Test
- import kotlin.test.assertEquals
+import org.junit.Test
+import kotlin.test.assertEquals
 
 class SSQTest {
     @Test
